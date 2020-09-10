@@ -1,0 +1,192 @@
+$tb-h: 65px;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    .top{
+        z-index: 99999;
+        position:fixed;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        align-content:center;
+        width: 100vw;
+        height: $tb-h;
+        background: #ffffff;
+        padding: 5px 50px 5px 50px;
+        .logo{
+            display: inline-block;
+            cursor: pointer;
+            color: red;
+            font-size: 25px;
+            font-weight: 600;
+            padding: 10px;
+            border-radius:50%;
+            transition: all 0.4s ease;
+            &:hover{
+                opacity: 0.5;
+                background: #f1f2f6;
+            }
+        }
+        .inicio{
+            display: inline-block;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            background: #000;
+            padding: 10px;
+            border-radius:42%;
+        }
+        .hoy{
+            display: inline-block;
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            border-radius:42%;
+            transition: all 0.4s ease;
+            &:hover{
+                background: #eafeff9c;
+            }
+            margin-right: 5px;
+        }
+        .siguiendo{
+            display: inline-block;
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            border-radius:23%;
+            transition: all 0.4s ease;
+            &:hover{
+                background: #eafeffbd;
+            }
+        }
+        .buscar{
+            display: inline-block;
+            width: 45vw;
+            color: gray;
+            padding: 10px;
+            border-radius:5px 5px 5px 5px;;
+            background: #a4b0be2a;
+            transition: all 0.4s ease;
+            &:hover{
+                background: rgba(128, 128, 128, 0.445) ;
+                opacity: 0.5;
+            }
+            margin-right: 5px;
+        }
+        .notificacion, .mensaje, .perfil, .mas{
+            display: inline-block;
+            cursor: pointer;
+            color: gray;
+            font-size: 25px;
+            font-weight: 600;
+            padding: 10px;
+            border-radius:50%;
+            transition: all 0.4s ease;
+            &:hover{
+                opacity: 0.5;
+                background: #f1f2f6;
+            }
+        }
+    }
+
+    .contenedor{
+        width: 100%;
+        height: 100vh;
+        padding: 5px 10px 0px 10px;
+        position: relative;
+        .contenedorM{
+            margin-top: $tb-h+5px;
+            display: flex;
+            flex-flow: column wrap;
+            align-items:center;
+            align-content:center;
+            width: 100%;
+            height: auto;
+            .imagenes{
+                img{
+                    border-radius:10px;
+                }
+                box-sizing: border-box;
+                cursor: pointer;
+                padding: 5px;
+                opacity: 0.9;
+                transition: all 0.4s ease;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    body{
+        .top{
+            .hoy{
+                display: none;
+            }
+            .siguiendo{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    body{
+        .top{
+            .buscar{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 400px) {
+    body{
+        .contenedor{
+            .contenedorM{
+                height: 10200px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 650px) {
+    body{
+        .contenedor{
+            .contenedorM{
+                height: 6850px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 860px) {
+    body{
+        .contenedor{
+            .contenedorM{
+                height: 5250px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1070px) {
+    body{
+        .contenedor{
+            .contenedorM{
+                height: 4000px;
+            }
+        }
+    }
+}
